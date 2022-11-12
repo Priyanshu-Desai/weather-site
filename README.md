@@ -15,6 +15,10 @@ this project needs node.js to run. to install node.js, go to nodejs.org and down
 
 now the weather site is ready to run! type a city name in the input box and you will get the latest weather conditions for that city.
 
+# SLA
+An Service-level agreement (SLA) is a commitment between a service provider and a client. The SLA will show long a service will be available for and how much time it will be down for.
+This app has 100% uptime because it is run locally on the client's machine. 
+
 # copyright and license
 copyright priyanshu-desai
 protected under the terms of the MIT license
