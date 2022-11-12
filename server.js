@@ -14,7 +14,13 @@ app.get('/', function(req, res) {
 app.post('/', function(req, res) {
   const url = 'http://api.openweathermap.org/data/2.5/weather?q='+req.body.postcodeSearchBox+'&appid=346eda849bac45f08391170e473a0f11&units=metric'
   http.get(url, function(response){
-    console.log(response.statusCode)
+    var statusCode = response.statusCode
+    console.log(statusCode)
+    if (statusCode === 404) {
+      res.write('<h1>Error 404</h1>')
+      res.write('<p>could not find what you were looking for</p>')
+      res.send()
+    }
     response.on('data', function(data){
       const weather = JSON.parse(data)
       const description = weather.weather[0].description
