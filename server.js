@@ -36,6 +36,6 @@ app.post('/', function(req, res) {
   })
 })
 
-app.listen(5000, function() {
-  console.log('server running on port 5000')
+app.listen(80, function() {
+  console.log('server running on port 80')
 })
